@@ -45,9 +45,11 @@ addFriendButton.addEventListener('click', () => {
         // I wrote friendInputEl.value <-- See Line 48
     // create a new friend object
     let newFriend = {
-        name: friendInputEl.value,
+        name: friendInputEl.value || `Friend Number ${Math.floor(Math.random() * 100)}`,
         satisfaction: 1, // Review
     };
+
+
     // push it into the friends state array, passed in as an argument
     friendData.push(newFriend);
     // reset the input
