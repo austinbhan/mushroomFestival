@@ -69,7 +69,9 @@ function displayFriends() {
             if (friend.satisfaction < 3 && mushroomCount > 0) {
                 friend.satisfaction++;
                 mushroomCount--;
-            } 
+            } else if (mushroomCount === 0) {
+                alert('No Mushrooms left!');
+            }
             displayFriends();
             displayMushrooms();
         //     add an event listener to each friend
